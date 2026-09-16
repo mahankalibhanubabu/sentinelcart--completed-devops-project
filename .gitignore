@@ -1,0 +1,120 @@
+
+---
+
+# 0.29 Create the initial `.gitignore`
+
+This file prevents Git from tracking files that should not be committed.
+
+This is especially important for DevSecOps because accidental secret commits are a real problem.
+
+### FILE: `.gitignore`
+
+```gitignore
+# ==========================================
+# Operating system files
+# ==========================================
+
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ==========================================
+# Editors and IDEs
+# ==========================================
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ==========================================
+# Node.js
+# ==========================================
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Build output
+dist/
+build/
+coverage/
+
+# ==========================================
+# Terraform
+# ==========================================
+
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform plan files
+*.tfplan
+*.plan
+
+# ==========================================
+# Kubernetes
+# ==========================================
+
+*.kubeconfig
+
+# ==========================================
+# Security tool output
+# ==========================================
+
+trivy-report.*
+semgrep-report.*
+gitleaks-report.*
+checkov-report.*
+sbom.*
+
+# ==========================================
+# Docker
+# ==========================================
+
+.docker/
+
+# ==========================================
+# Logs
+# ==========================================
+
+*.log
+logs/
+
+# ==========================================
+# Temporary files
+# ==========================================
+
+tmp/
+temp/
+.cache/
+
+# ==========================================
+# Secrets and credentials
+# ==========================================
+
+*.pem
+*.key
+*.crt
+credentials
+credentials.*
+.aws/
+.ssh/
+
+# Never commit local secret files
+secrets/
