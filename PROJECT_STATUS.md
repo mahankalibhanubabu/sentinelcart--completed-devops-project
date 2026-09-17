@@ -7,7 +7,7 @@ Phase 0 — Architecture, requirements, and development environment.
 ## Progress
 
 - [x] Phase 0 — Architecture and development environment
-- [ ] Phase 1 — Local development environment
+- [x] Phase 1 — Local development environment
 - [ ] Phase 2 — Build the application
 - [ ] Phase 3 — Dockerize all services
 - [ ] Phase 4 — Run the complete application locally
