@@ -10,7 +10,7 @@ Phase 0 — Architecture, requirements, and development environment.
 - [x] Phase 1 — Local development environment
 - [x] Phase 2 — Build the application
 - [x] Phase 3 — Dockerize all services
-- [ ] Phase 4 — Run the complete application locally
+- [x] Phase 4 — Run the complete application locally
 - [ ] Phase 5 — AWS fundamentals
 - [ ] Phase 6 — Terraform project structure
 - [ ] Phase 7 — AWS networking
