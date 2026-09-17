@@ -1,21 +1,41 @@
 # SentinelCart Architecture
 
-## Status
+## High-Level Flow
 
-Initial placeholder. The complete architecture documentation will be
-developed throughout the project.
+Developer
+    ↓
+GitHub Application Repository
+    ↓
+GitHub Actions CI
+    ↓
+Build and Test
+    ↓
+Security Scanning
+    ↓
+Docker Image
+    ↓
+Amazon ECR
+    ↓
+GitOps Repository
+    ↓
+Argo CD
+    ↓
+Amazon EKS
+    ↓
+SentinelCart Application
+    ↓
+PostgreSQL Database
 
-## Scope
+## Security Components
 
-This document will describe:
+- Trivy for vulnerability scanning
+- Kyverno for Kubernetes policy enforcement
+- Falco for runtime threat detection
+- AWS IAM for access control
+- AWS Secrets Manager for secret storage
 
-- Application architecture
-- AWS architecture
-- Kubernetes architecture
-- CI/CD architecture
-- GitOps architecture
-- Security boundaries
-- Network boundaries
-- Data flow
-- Secret flow
-- Observability flow
+## Observability Components
+
+- Prometheus for metrics collection
+- Grafana for dashboards
+- Kubernetes logs for troubleshooting
