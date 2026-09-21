@@ -16,7 +16,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState('home'); // 'home', 'category', 'checkout'
   const [selectedProduct, setSelectedProduct] = useState(INITIAL_PRODUCTS[0]);
   const [isProductModalOpen, setIsProductModalOpen] = useState(false);
-  
+
   // Cart State (Initialized with 2 items to match Figma Cart (2))
   const [cart, setCart] = useState([
     { ...INITIAL_PRODUCTS[0], quantity: 1 },
@@ -25,7 +25,7 @@ export default function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
+
   // Filter States
   const [priceFilter, setPriceFilter] = useState('all');
   const [brandFilters, setBrandFilters] = useState({ Nova: true, Pulse: true, Arc: true });
@@ -46,7 +46,7 @@ export default function App() {
   const [orderConfirmed, setOrderConfirmed] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/products')
+    fetch('http://localhost:5000/api/products')
       .then((res) => {
         if (!res.ok) throw new Error('API unavailable');
         return res.json();
@@ -66,7 +66,7 @@ export default function App() {
           setProducts(merged);
         }
       })
-      .catch(() => {});
+      .catch(() => { });
   }, []);
 
   const showToast = (msg) => {
@@ -123,8 +123,8 @@ export default function App() {
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase();
         const match = product.name.toLowerCase().includes(q) ||
-                      product.brand.toLowerCase().includes(q) ||
-                      product.category.toLowerCase().includes(q);
+          product.brand.toLowerCase().includes(q) ||
+          product.category.toLowerCase().includes(q);
         if (!match) return false;
       }
       if (priceFilter === 'under-5000' && product.price >= 5000) return false;

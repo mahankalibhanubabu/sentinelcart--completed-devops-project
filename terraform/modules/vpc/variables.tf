@@ -1,20 +1,13 @@
-variable "aws_region" {
-  description = "AWS region where SentinelCart infrastructure will be deployed."
+variable "project_name" {
+  description = "Project name."
   type        = string
-  default     = "ap-south-2"
 }
 
 variable "environment" {
   description = "Deployment environment."
   type        = string
-  default     = "dev"
 }
 
-variable "project_name" {
-  description = "Name of the project."
-  type        = string
-  default     = "sentinelcart"
-}
 
 variable "vpc_cidr" {
   description = "CIDR block for the SentinelCart VPC."
@@ -25,7 +18,7 @@ variable "vpc_cidr" {
 variable "availability_zones" {
   description = "Availability zones used by SentinelCart."
   type        = list(string)
-  default = [
+  default     = [
     "ap-south-2a",
     "ap-south-2b"
   ]
