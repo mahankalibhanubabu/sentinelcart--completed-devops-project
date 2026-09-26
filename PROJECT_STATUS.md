@@ -13,9 +13,9 @@ Phase 0 — Architecture, requirements, and development environment.
 - [x] Phase 4 — Run the complete application locally
 - [x] Phase 5 — AWS fundamentals
 - [x] Phase 6 — Terraform project structure
-- [ ] Phase 7 — AWS networking
-- [ ] Phase 8 — IAM and security foundations
-- [ ] Phase 9 — ECR
+- [x] Phase 7 — AWS networking
+- [x] Phase 8 — IAM and security foundations
+- [x] Phase 9 — ECR
 - [ ] Phase 10 — RDS PostgreSQL
 - [ ] Phase 11 — Redis
 - [ ] Phase 12 — EKS
